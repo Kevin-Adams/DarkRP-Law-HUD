@@ -12,8 +12,6 @@ local colour = {
 
 local dst = draw.SimpleText
 
-local x = ScrW()
-local y = ScrH()
 local pos_x = 0
 local pos_y = 0
 local offset = 0
@@ -89,6 +87,8 @@ end)
 
 hook.Add( "HUDPaint", "HUDPaint_LawBox", function()
   local text = laws or "Default laws."
+  local x = ScrW()
+  local y = ScrH()
   text = text:gsub("//", "\n"):gsub("\\n", "\n")
   text = DarkRP.textWrap(text, "open_sans_19b", 445)
   if (text == "") then text = "Default laws." end
