@@ -24,12 +24,8 @@ end)
 
 net.Receive( "LawsValue", function()
   local lawvalue = net.ReadString()
-  local allPlayers = player.GetAll()
   net.Start( "LawsPublic" )
   net.WriteString( lawvalue )
   net.Broadcast()
-  for k, v in pairs(allPlayers) do
-    DarkRP.notify( v, 0, 3, "The laws have been updated.")
-  end
-  print ( lawvalue )
+  DarkRP.notifyAll( 0, 3, "The laws have been updated.")
 end)
