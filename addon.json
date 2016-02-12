@@ -1,0 +1,11 @@
+{
+	"title"		:	"Laws HUD",
+	"type"		:	"tool",
+	"tags"		:	[ "roleplay" ],
+	"ignore"	:
+	[
+		"*.md",
+		"*.vcproj",
+		"*.svn*"
+	]
+}
