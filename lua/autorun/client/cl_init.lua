@@ -83,9 +83,6 @@ net.Receive( "LawsMenu", OpenLawsEditor )
 
 net.Receive( "LawsPublic", function()
   laws = net.ReadString()
-  text = text:gsub("//", "\n"):gsub("\\n", "\n")
-  text = DarkRP.textWrap(text, "open_sans_19b", 445)
-  if (text == "") then text = "Default laws." end
 end)
 
 hook.Add( "HUDPaint", "HUDPaint_LawBox", function()
@@ -94,6 +91,10 @@ hook.Add( "HUDPaint", "HUDPaint_LawBox", function()
   local y = ScrH()
 
   local width, height = surface.GetTextSize( text )
+
+  text = text:gsub("//", "\n"):gsub("\\n", "\n")
+  text = DarkRP.textWrap(text, "open_sans_19b", 445)
+  if (text == "") then text = "Default laws." end
 
   draw.RoundedBox( 0, x * 0.76, y * 0.02, 455, height + 35, Color( 0, 0, 0, 128 ) )
   draw.DrawText( "Laws", "open_sans_25b", x * 0.766, y * 0.02, Color( 255, 255, 255, 255 ), TEXT_ALIGN_LEFT )
