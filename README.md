@@ -1,4 +1,4 @@
-# DarkRP-Law-HUD
+# DarkRP Laws HUD
 A HUD which displays laws for DarkRP
 
 ##Features:
